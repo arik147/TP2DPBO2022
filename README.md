@@ -10,6 +10,9 @@ Repositori ini berisi tugas praktikum 2 yaitu CRUD kepengurusan organisasi kemah
 Halmana utama menampilkan daftar semua pengurus dari organisasi tersebut. terdapat fitur menambahkan data pengurus dan menampilkan detail pengurus serta fitur update dan delete. Selain itu juga terdapat halaman Detail Tabel yang menampilkan Tabel Divisi dan Bidang Divisi. Didalamnya berisi crud pada setiap tabel.
 
 ## Desain Database
+#### Tabel Pengurus terdapat 6 atribut, yaitu id_pengurus (primary key), nim, nama, semester, id_bidang (foreign key untuk tabel bidang), dan foto.
+#### Tabel Bidang Divisi : id_bidang (Primary key), jabatan, dan id_divisi (fk tabel divisi)
+#### Tabel Divisi : id_divisi (Primary Key) dan nama_divisi
 ![image](https://user-images.githubusercontent.com/99251032/164275468-e1b9e16b-dfe5-4d01-8dff-25ef39c7c778.png)
 
 
