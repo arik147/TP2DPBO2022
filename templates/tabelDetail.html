@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Detail Tabel</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="index.php">BEM</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link text-white active" aria-current="page" href="index.php">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="" data-bs-toggle="modal" data-bs-target="#modalDivisi"> + Divisi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="" data-bs-toggle="modal" data-bs-target="#modalBidang"> + Bidang Divisi</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- --------------- Kontainer --------------- -->
+  <div class="container d-flex flex-wrap justify-content-center my-4 px-2 py-4" style="gap: 2rem;">
+
+    <!-- --------------- TABEL DIVISI --------------- -->
+    <div>
+      <table class="table table-striped table-hover">
+        <thead class="table-primary">
+        <tr>
+          <th>No</th>
+          <th>Divisi</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody class="text-capitalize">
+        <tr>
+          DATA_DIVISI
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- --------------- TABEL BIDANG DIVISI --------------- -->
+  <div>
+    <table class="table table-striped table-hover">
+      <thead class="table-primary">
+        <tr>
+          <th>No</th>
+          <th>Jabatan</th>
+          <th>Divisi</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody class="text-capitalize"> 
+        <tr>
+          DATA_BIDANG
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- --------------- ADD DIVISI --------------- -->
+  <div class="modal fade" id="modalDivisi" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New Record Divisi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="" method="POST" enctype="multipart/form-data" autocomplete="on">
+
+            <div class="mb-3">
+                <label class="form-label" for="tnamadivisi">Nama Divisi</label>
+                <input type="text" class="form-control" name="tnamadivisi" required />
+            </div>
+      
+            <button type="submit" name="addDivisi" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- --------------- ADD BIDANG DIVISI --------------- -->
+  <div class="modal fade" id="modalBidang" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content ">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">New Record Bidang Divisi</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form action="" method="POST" enctype="multipart/form-data" autocomplete="on">
+
+            <div class="mb-3">
+              <label class="form-label" for="tjabatan">Jabatan</label>
+              <input type="text" class="form-control" name="tjabatan" required />
+            </div>
+
+            <div class="mb-3">
+              <label class="form-label" for="tdivisi">Divisi</label>
+              <select name="tdivisi" class="form-control">
+                SELECT_DIVISI
+              </select>
+            </div>
+      
+            <button type="submit" name="addBidang" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
